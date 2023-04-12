@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadatak 5 </title>
+<body>
+    <style>/* oboji sve linkove koji upućuju na Google u zeleno */
+        a[href*="google"] {
+          color: green;
+        }
+        
+        /* oboji link koji upućuje na LINK group u crveno */
+        a[href*="link-group"] {
+          color: red;
+        }
+        
+        /* naizmenično oboji paragrafe u second-div-u u crveno i plavo */
+        #second-div p:nth-of-type(odd) {
+        color: red;
+        }
+        
+        #second-div p:nth-of-type(even) {
+        color: blue;
+        }
+        
+        /* dodaj "NEW" na krajeve paragrafa 2 i 3 */
+        #second-div p:nth-of-type(2)::after,
+        #second-div p:nth-of-type(3)::after {
+          content: " NEW";
+          color: yellow;
+        }
+        
+        /* učini tekst Paragraph 10 elementa italic prelaskom miša preko njega */
+        #second-div p:last-child:hover{
+          font-style: italic;
+        }
+        </style>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+      </head>
+
+      <div id="first-div">
+		<h3>PRAGRAPH 1</h3>
+		<p><a href="http://google.com/">Link to Google</a></p>
+        <a href="http://google.com/">Here Is Google</a></p>
+		<p><a href="http://linkgroup.eu/">Link to LINK Group</a></p>
+	</div>
+
+	<div id="second-div">
+		<p>Paragraph 2</p>
+		<p>Paragraph 3</p>
+		<p>Paragraph 4</p>
+		<p>Paragraph 5</p>
+		<p>Paragraph 6</p>
+		<p>Paragraph 7</p>
+		<p>Paragraph 8</p>
+		<p>Paragraph 9</p>
+		<p>Paragraph 10</p>
+	</div>
+
+
+
+</body>
+</html>
